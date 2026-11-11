@@ -1,39 +1,37 @@
-# HelpDesk AI Assistant
+# 🎧 HelpDesk AI Assistant
 
-Assistente de triagem de chamados de suporte técnico com IA generativa. O usuário descreve o problema em linguagem natural e a aplicação classifica a **urgência** e a **categoria** (Hardware, Rede, Acessos, Software) e sugere um passo de resolução para acelerar o atendimento e o cumprimento de SLA.
+> Aplicação web para triagem automatizada e inteligente de chamados de TI utilizando Inteligência Artificial Generativa (LLM).
 
-🔗 **Demo online:** https://helpdesk-ai-assistan-ns2v.bolt.host/
+---
 
-## O problema
+## 📌 Sobre o Projeto
 
-Chamados mal descritos geram retrabalho: o analista precisa perguntar de novo, classificar manualmente e priorizar na mão. Este projeto automatiza essa primeira triagem.
+O **HelpDesk AI Assistant** foi desenvolvido para otimizar o fluxo de atendimento N1/N2 em equipas de suporte e TI. A aplicação recebe relatos de incidentes em linguagem natural, processa o contexto através de um modelo LLM e gera instantaneamente:
+- **Categorização Automática:** Identificação do tipo de incidente (Software, Hardware, Redes, Acessos).
+- **Classificação de Criticidade:** Definida de forma dinâmica de acordo com o impacto relatado.
+- **Resumo Executivo:** Síntese do chamado para agilizar a leitura do analista.
+- **Script de Resolução (Troubleshooting):** Passo a passo técnico sugerido para a solução rápida do problema.
 
-## Como funciona
+---
 
-1. O usuário escreve o relato do problema com as próprias palavras.
-2. O motor de triagem normaliza o texto e pontua palavras-chave por tópico para definir a categoria. A urgência é definida por termos de impacto (Alta,Média,Baixa) e o sistema sugere os passos de resolução.
-3. A interface exibe a classificação e sugere um diagnóstico para o analista começar o atendimento.
+## 🛠️ Tecnologias Utilizadas
 
-## Tecnologias
+- **Front-End:** React.js, TypeScript, Tailwind CSS, Vite
+- **Inteligência Artificial:** Google Gemini API (Engenharia de Prompts e respostas estruturadas em JSON)
+- **Backend & Serverless:** Edge Functions para consumo seguro da API de IA
+- **Banco de Dados:** Supabase (Persistência do histórico de chamados em tempo real)
 
-React · TypeScript · Tailwind CSS · Vite · Supabase
+---
 
+## 🔒 Arquitetura e Segurança
 
-## Variáveis de ambiente
+A integração com a API do Google Gemini é realizada através de um ambiente serverless seguro no backend, garantindo que as chaves de API (`AI_API_KEY`) fiquem ocultas do cliente (browser) e protegidas contra exposição pública.
 
-.env com VITE_SUPABASE_URL e VITE_SUPABASE_ANON_KEY
+---
 
-## Como rodar localmente
+## 🚀 Como Executar o Projeto Localmente
 
-```bash
-npm install
-npm run dev
-```
-
-## Contexto
-
-Projeto criado a partir da minha rotina em Service Desk, onde a triagem manual de chamados consome tempo e impacta o SLA. Desenvolvido com apoio do Bolt.
-
-## Autora
-
-Fernanda Damico · [LinkedIn](https://linkedin.com/in/fernanda-damico)
+1. **Clonar o repositório:**
+   ```bash
+   git clone [https://github.com/Fernanda-Damico/Helpdesk-AI-Assistant.git](https://github.com/Fernanda-Damico/Helpdesk-AI-Assistant.git)
+   cd Helpdesk-AI-Assistant
