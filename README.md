@@ -21,7 +21,7 @@ React · TypeScript · Tailwind CSS · Vite · Supabase
 
 ## Variáveis de ambiente
 
-Criar um .env com VITE_SUPABASE_URL e VITE_SUPABASE_ANON_KEY
+.env com VITE_SUPABASE_URL e VITE_SUPABASE_ANON_KEY
 
 ## Como rodar localmente
 
